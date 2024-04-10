@@ -145,9 +145,22 @@ section {
 
 /* Media queries for tablet/mobile */
 
-/* Weeks media queries */
+
 
 @media screen and (max-width: 900px) {
+  /* Navbar tablet */
+  .navright .dropdown {
+    /* display: none; */
+    width: 7rem;
+    top: 6rem;
+    right: 1.9rem;
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1);
+  }
+  main {
+    height: fit-content;
+    margin: 2rem 0 5rem;
+  }
+  /* Weeks tablet */
   .activities,
   .corrections,
   .group-works,
@@ -159,35 +172,37 @@ section {
   }
 }
 @media screen and (max-width: 500px) {
+  header {
+    height: 8vh;
+  }
+  /*.mobileDropdownHeader {
+    height: 11rem;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  } */
   .navright .full-rightnav {
     /* display: none; */
     position: absolute;
-    top: 6rem;
-    right: 2rem;
+    top: 8rem;
+    transform: translate(-50%, 0);
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 50px);
     align-items: center;
     gap: 0;
     background-color: #fff;
     border-radius: 15px;
-    padding: 1rem 0 1rem 0;
-    min-width: 16rem;
-    max-width: 16rem;
+    width: 18.5rem;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   .navright .full-rightnav li {
     width: 100%;
-    border-bottom: 1px solid #292929;
+    border-top: 1px solid #292929;
     text-align: center;
-    padding-bottom: 1rem;
+    padding: 1rem;
   }
-  .navright .full-rightnav li:nth-child(2) {
-    padding: 0.5rem 0 1rem 0;
-  }
-  .navright .full-rightnav li:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-  }
+
   .navright .hamburger-menu {
     display: flex;
   }
@@ -206,21 +221,27 @@ section {
   }
   .mobileDropdown {
     position: absolute;
-    top: 6rem;
-    right: 2rem;
-    flex-direction: column;
-    align-content: center;
-    gap: 2rem;
+    top: 8rem;
+    transform: translate(-50%, 0);
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 0;
     background-color: #fff;
     border-radius: 15px;
-    padding: 1rem;
-    min-width: 16rem;
-    max-width: 16rem;
+    width: 18.5rem;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   .mobileDropdown  li {
     justify-self: center;
   }
-  .mobileDropdownInner {
-
+  .navright .dropdown {
+    display: none;
+  }
+  .mobileDropdownWeeks {
+    display: flex;
+    flex-direction: column;
   }
 }
