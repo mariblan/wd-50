@@ -15,3 +15,5 @@ console.log(array[0]);
 
 // step 3
 console.log(array.length);
+
+
