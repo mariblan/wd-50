@@ -4,41 +4,96 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>week 3</title>
+    <link rel="stylesheet" href="activities.css" />
   </head>
   <body>
+    <h1>Corrections w-3</h1>
     <!-- 02-DRY -->
-    <div class="block names"></div>
+    <section class="block">
+      <h2>DRY</h2>
+      <div class="block names"></div>
+    </section>
 
     <!-- 03 Onclick -->
-    <div class="block">
-      <button>Redirect</button>
-    </div>
+    <section class="block">
+      <h2>Onclick</h2>
+      <div class="block">
+        <button id="redirect">Redirect</button>
+      </div>
+    </section>
 
     <!-- 04 Onclick Conditional -->
-    <div class="block">
-      <button class="not-redirect">Not redirect</button>
-      <button class="redirect">Redirect</button>
-    </div>
+    <section class="block">
+      <h2>Onclick Conditional</h2>
+      <div class="block" id="buttons">
+        <button class="not-redirect">Not redirect</button>
+        <button class="redirect">Redirect</button>
+      </div>
+    </section>
 
     <!-- 05 Onkeyup -->
-    <div class="block">
-      <form>
-        <input type="text" name="name" />
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+    <section class="block">
+      <h2>Onkeyup</h2>
+      <div class="block">
+        <form id="keyup-container">
+          <input type="text" name="name" id="keyup" />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
 
     <!-- 06 Onsubmit -->
-    <div class="block">
-      <form>
-        <input type="text" name="name" />
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+    <section class="block">
+      <h2>Onsubmit</h2>
+      <div class="block">
+        <form id="submit-container">
+          <input type="text" name="name" id="submit" />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
 
     <!-- 07 Css with Js -->
+    <section class="block">
+      <h2>Css with js</h2>
+      <div class="computer-container">
+        <div class="iMac">
+          <div class="body">
+            <div class="shine"></div>
+            <div class="screen">
+              <h1 class="screen-text"></h1>
+            </div>
+            <div id="logo"></div>
+          </div>
+          <div class="stand"></div>
+        </div>
+      </div>
+      <div class="tasks">
+        <div class="task">
+          <strong>Only with JavaScript</strong>
+          <br />
+          On the click on the logo, create an alert with
+          <code>alert('system on')</code>
+        </div>
 
-    <script type="module" src="./01-ArrayCardio.js"></script>
+        <div class="task">
+          <strong>Only with JavaScript</strong>
+          <br />
+          Instead of the alert, change the background of the screen with the
+          code
+          <code>#444</code>
+        </div>
+
+        <div class="task">
+          <strong>Only with JavaScript</strong>
+          <br />
+          In addition of the background, insert inside the h1 the text
+          <strong>Hello World!</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- <script type="module" src="./01-ArrayCardio.js"></script> -->
     <script type="module" src="./02-DRY.js"></script>
     <script type="module" src="./03-Onclick.js"></script>
     <script type="module" src="./04-OnclickConditional.js"></script>
