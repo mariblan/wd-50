@@ -8,7 +8,7 @@ function notify(name) {
 }
 
 // Solution:
-const notify1 = (name) => {
+const notify = (name) => {
   console.log(`${name} is here`);
 };
 
@@ -18,6 +18,7 @@ setTimeout(function () {
 }, 1000);
 
 // Solution:
+
 setTimeout(() => {
   console.log('1000ms == 1 second');
 }, 1000);

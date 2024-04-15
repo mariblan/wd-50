@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Exercise</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="theReadingList.css" />
+  </head>
+
+  <body>
+    <div class="block">
+      <h1>JS OOP – The Reading List</h1>
+      <h5><i>An object-oriented book-list!</i></h5>
+      <div class="list-container">
+        <ul class="list">
+          <li>Create a class BookList</li>
+          <li>Create another class called Book</li>
+          <li>
+            BookLists should have the following properties:
+            <ul class="list">
+              <li>An array of all the Books</li>
+              <li>Number of books marked as read</li>
+              <li>Number of books marked not read yet</li>
+              <li>A reference to the next book to read (book object)</li>
+              <li>A reference to the current book being read (book object)</li>
+              <li>A reference to the last book read (book object)</li>
+            </ul>
+          </li>
+          <li>
+            Each Book should have several properties:
+            <ul class="list">
+              <li>Title</li>
+              <li>Genre</li>
+              <li>Author</li>
+              <li>Read (true or false)</li>
+              <li>
+                Read date, can be blank, otherwise needs to be a
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date"
+                  >JS Date() object</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            Every Booklist should have a few methods:
+            <ul class="list">
+              <li>
+                .add(book)
+                <ul>
+                  <li>should add a book to the books list.</li>
+                </ul>
+              </li>
+              <li>
+                .finishCurrentBook()
+                <ul class="list">
+                  <li>
+                    should mark the book that is currently being read as “read”
+                  </li>
+                  <li>Give it a read date of new Date(Date.now())</li>
+                  <li>
+                    Change the last book read to be the book that just got
+                    finished
+                  </li>
+                  <li>
+                    Change the current book to be the next book to be read
+                  </li>
+                  <li>
+                    Change the next book to be read property to be the first
+                    unread book you find in the list of books
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            Booklists and Books might need more methods than that. Try to think
+            of more that might be useful.
+          </li>
+        </ul>
+      </div>
+      <a
+        target="_blank"
+        href="https://www.tutorialspoint.com/json/json_syntax.htm"
+        >Help</a
+      >
+      <a target="_blank" href="https://www.w3schools.com/js/js_json_syntax.asp"
+        >Help</a
+      >
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
