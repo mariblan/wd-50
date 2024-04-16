@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LocalStorage - get items</title>
+    <link rel="stylesheet" href="../catch-ups.css" />
+  </head>
+  <body>
+    <div class="block">
+      <h1>DOM: - get items</h1>
+      <div class="sections-container">
+        <section class="sections">
+          <h2>Definition</h2>
+          <p>
+            The Document Object Model (DOM) is the data representation of the
+            objects that comprise the structure and content of a document on the
+            web.
+          </p>
+        </section>
+
+        <section class="sections">
+          <h2>Getting One element</h2>
+          <ul>
+            <li>Get an element by id: document.getElementById('id')</li>
+            <li>
+              Get elements by query selector: document.querySelector('selector')
+            </li>
+          </ul>
+        </section>
+        <section class="sections">
+          <h2>Getting Multiple elements</h2>
+          <ul>
+            <li>
+              Get elements by class name:
+              document.getElementsByClassName('class')
+            </li>
+            <li>
+              Get elements by tag name: document.getElementsByTagName('tag')
+            </li>
+            <li>
+              Get elements by query selector all:
+              document.querySelectorAll('selector')
+            </li>
+          </ul>
+        </section>
+
+        <section class="sections">
+          <h2>Steps</h2>
+          <ol>
+            <li>
+              Get the item with the id "formToDo" (using the getElementById):
+              <ul>
+                <li>Store it in a variable called "form"</li>
+                <li>
+                  Log the variable into the console (you should see the form
+                  html logged into the console)
+                </li>
+              </ul>
+            </li>
+            <li>
+              Get the button element with the id "add-todo" (using the
+              querySelector):
+              <ul>
+                <li>Store it in a variable called "addBtn"</li>
+                <li>
+                  Log the variable into the console (you should see the button
+                  html logged into the console)
+                </li>
+              </ul>
+            </li>
+            <li>
+              Get all the li elements in the ul with id "to-do-list" (using the
+              querySelectorAll):
+              <ul>
+                <li>Store it in a variable called "toDoes"</li>
+                <li>
+                  Log the variable into the console (you should see an array of
+                  li elements logged into the console, it will be a nodeList)
+                </li>
+                <li>
+                  Add a forEach method to the "toDoes" array:
+                  <ul>
+                    <li>
+                      Pass inside as an argument an anonymous function:
+                      <ul>
+                        <li>Give it a parameter named "toDo"</li>
+                        <li>
+                          Inside the body log the toDo into the console (this
+                          should log into the console each item in the "toDoes"
+                          array)
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              Get all the li elements in the ul with id "to-do-list" (using the
+              getElementsByTagName):
+              <ul>
+                <li>Store it in a variable called "toDoes"</li>
+                <li>
+                  Log the variable into the console (you should see an array of
+                  li elements logged into the console, it will be a html
+                  collection)
+                </li>
+                <li>
+                  Add a forEach method to the "toDoes" array:
+                  <ul>
+                    <li>
+                      Pass inside as an argument an anonymous function:
+                      <ul>
+                        <li>Give it a parameter named "toDo"</li>
+                        <li>
+                          Inside the body log the toDo into the console (this
+                          should log into the console each item in the "toDoes"
+                          array)
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              Repeat step 4 but using getElementsByClassName method instead.
+            </li>
+          </ol>
+        </section>
+      </div>
+    </div>
+    <div class="block2">
+      <section class="block">
+        <h2>My To-Does</h2>
+        <section class="block">
+          <form class="form" id="formToDo">
+            <input type="text" id="to-do-input" placeholder="Add a to-do" />
+            <button type="submit" id="add-todo">Add</button>
+          </form>
+        </section>
+        <section class="block">
+          <h4>My to-do list</h4>
+          <ul class="to-do-list">
+            <li class="toDo">Cooking</li>
+            <li class="toDo">Sending email</li>
+            <li class="toDo">Doing the dishes</li>
+          </ul>
+        </section>
+      </section>
+      <div class="block">
+        <h4>Need help?</h4>
+        <a
+          target="_blank"
+          href="https://www.w3schools.com/jsref/met_storage_clear.asp"
+          >clear()</a
+        >
+      </div>
+    </div>
+    <script type="module" src="localStorageRemove.js"></script>
+  </body>
+</html>
