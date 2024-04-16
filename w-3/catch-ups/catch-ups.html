@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Storage</title>
+    <link rel="stylesheet" href="catch-ups.css" />
+  </head>
+  <body>
+    <div class="block">
+      <h1>Local Storage</h1>
+      <div class="sections-container">
+        <section class="sections">
+          <h2>Definition</h2>
+          <p>
+            Local storage is a read-only property of the window interface that
+            allows you to access a storage object for the Document's origin.
+          </p>
+          <p>
+            Local Storage data is saved accross sessions, so it is a good place
+            to store data that you want to persist.
+          </p>
+        </section>
+        <section class="sections">
+          <h2>How to use localStorage</h2>
+          <ul>
+            <li>Set an item: localStorage.setItem('key', 'value')</li>
+            <li>Get an item: localStorage.getItem('key')</li>
+            <li>Remove an item: localStorage.removeItem('key')</li>
+            <li>Clear all items: localStorage.clear()</li>
+          </ul>
+        </section>
+        <section class="sections">
+          <h2>Steps</h2>
+          <ol>
+            <li>
+              Add an item to your localStorage:
+              <ul>
+                <li>Name the key string</li>
+                <li>Pass your name as a value</li>
+              </ul>
+            </li>
+            <li>
+              Get the item that you saved in localStorage:
+              <ul>
+                <li>Store it in a variable called "myName"</li>
+              </ul>
+            </li>
+            <li>
+              Display the value you stored in the "myName" varible in the span
+              with id "my-name":
+              <ul>
+                <li>Get the span with DOM manipulation.</li>
+                <li>
+                  Change the innerText of the span to be the value of your
+                  variable.
+                </li>
+              </ul>
+            </li>
+          </ol>
+        </section>
+      </div>
+    </div>
+    <div class="block2">
+      <div class="block">
+        <h4>How to check localStorage?</h4>
+        <p>
+          Open the developer tools in your browser and go to the Application
+          tab. You will see the localStorage object and the items you have
+          saved.
+        </p>
+      </div>
+      <div class="block">
+        <!-- Use DOM manipulation to insert your name here -->
+        <h2><span>Hello,</span><span id="my-name"></span><span>!</span></h2>
+      </div>
+    </div>
+    <script type="module" src="localStorage.js"></script>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LocalStorage - getItem()</title>
+    <link rel="stylesheet" href="../catch-ups.css" />
+  </head>
+  <body>
+    <div class="block">
+      <h1>Local Storage - getItem()</h1>
+      <div class="sections-container">
+        <section class="sections">
+          <h2>Definition</h2>
+          <p>
+            The getItem() method returns value of the specified Storage Object
+            item.
+          </p>
+          <p>
+            The value will always be returned as a string, so if what was saved
+            was an array or an object, it will need to be parsed.
+          </p>
+          <p>
+            The parse method is used to transform the stringify value you are
+            recieving into an object.
+          </p>
+        </section>
+        <section class="sections">
+          <h2>How to set an item</h2>
+          <ul>
+            <li>Get an item: localStorage.getItem('key')</li>
+            <li>
+              Getting the value when it is not a string:
+              <ul>
+                <li>JSON.parse(localStorage.getItem('key'))</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section class="sections">
+          <h2>Steps</h2>
+          <ol>
+            <li>
+              Get the item with the key myName from localStorage:
+              <ul>
+                <li>Log the value into your console</li>
+              </ul>
+            </li>
+
+            <li>
+              Get the item with the key strArray from localStorage:
+              <ul>
+                <li>
+                  Use the parse method to transform the stringify value you are
+                  recieving into an object.
+                </li>
+                <li>Log the value into your console</li>
+              </ul>
+            </li>
+            <li>
+              Get the item with the key objArray from localStorage:
+              <ul>
+                <li>
+                  Use the parse method to transform the stringify value you are
+                  recieving into an object.
+                </li>
+                <li>Log the value into your console</li>
+              </ul>
+            </li>
+          </ol>
+        </section>
+      </div>
+    </div>
+    <div class="block2">
+      <div class="block">
+        <h4>How to check localStorage?</h4>
+        <p>
+          Open the developer tools in your browser and go to the Application
+          tab. You will see the localStorage object and the items you have
+          saved.
+        </p>
+      </div>
+      <div class="block">
+        <h4>Need help?</h4>
+        <a
+          target="_blank"
+          href="https://www.w3schools.com/jsref/met_storage_getitem.asp"
+          >getItem()</a
+        >
+        <a
+          target="_blank"
+          href="https://www.w3schools.com/js/js_json_parse.asp"
+          >JSON.parse()</a
+        >
+      </div>
+    </div>
+    <script type="module" src="localStorageGetItem.js"></script>
+  </body>
+</html>

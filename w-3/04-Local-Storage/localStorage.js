@@ -19,7 +19,7 @@ const addTodo = (e) => {
   console.log(e);
 };
 
-// toDoText.addEventListener('change', (e) => console.log(e.target));
+
 addBtn.addEventListener('click', (e) => {
   console.log(toDoText.value);
   const toDo = {
