@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM: - EventListener</title>
+    <link rel="stylesheet" href="../catch-ups.css" />
+    <link rel="stylesheet" href="domEvents.css" />
+  </head>
+  <body>
+    <div class="block">
+      <h1>DOM: - EventListener</h1>
+      <div class="sections-container">
+        <section class="sections">
+          <h2>Definition</h2>
+          <p>
+            The classList property returns the CSS classnames of an element.
+          </p>
+        </section>
+
+        <section class="sections">
+          <h2>Attribute Methods</h2>
+          <ul>
+            <li>
+              add() - Adds one or more class names to an element. If the
+              specified class already exists, the class will not be added.
+            </li>
+            <li>
+              remove() - Removes one or more class names from an element. Note:
+              Removing a class that does not exist, does NOT throw an error.
+            </li>
+          </ul>
+        </section>
+        <section class="sections">
+          <h2>Steps</h2>
+          <ol>
+            <li>
+              Check the domClassList.css file:
+              <ul>
+                <li>There is a class called "hidden".</li>
+                <li>
+                  We are going to remove that class to our element with id
+                  "dropdown" in the HTML file when hovering over the element
+                  with the id "dropdown-toggle".
+                </li>
+                <li>
+                  We will add it back when the element is not hovering over the
+                  "dropdown" element anymore.
+                </li>
+              </ul>
+            </li>
+            <li>
+              Get the element with the id "dropdown-toggle"
+              <ul>
+                <li>Store it in a variabled called "dropdown-toggle"</li>
+              </ul>
+            </li>
+            <li>
+              Get the element with the id "dropdown":
+              <ul>
+                <li>Store it into a variable named "dropdown"</li>
+              </ul>
+            </li>
+            <li>
+              Add an event listener to the "dropdown-toggle" element
+              <ul>
+                <li>
+                  Pass two arguments:
+                  <ul>
+                    <li>The type of event: "mouseover"</li>
+                    <li>
+                      An anonymous function:
+                      <ul>
+                        <li>Needs no parameter</li>
+                        <li>
+                          Removes the class "hidden" to the "dropdown" element
+                          (classList.remove())
+                          <ul>
+                            <li>
+                              You should see how the element appear when
+                              hovering ofer the element "dropdown-toggle".
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              Add an event listener to the "dropdown" element
+              <ul>
+                <li>
+                  Pass two arguments:
+                  <ul>
+                    <li>The type of event: "mouseout"</li>
+                    <li>
+                      An anonymous function:
+                      <ul>
+                        <li>No parameter needed</li>
+                        <li>
+                          Remove the class "hidden" to the "dropdown" element
+                          (classList.remove())
+                          <ul>
+                            <li>
+                              You should see the dropdown appearing again when
+                              you stop hovering over the "dropdown".
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ol>
+        </section>
+      </div>
+    </div>
+    <div class="block2">
+      <section class="block">
+        <h2>My To-Does</h2>
+        <section class="block">
+          <form class="form" id="formToDo">
+            <input type="text" id="to-do-input" placeholder="Add a to-do" />
+            <button type="submit" id="add-todo">Add</button>
+          </form>
+        </section>
+        <section class="block">
+          <nav class="nav-container">
+            <ul id="navbar">
+              <li class="navItem">Home</li>
+              <li class="navItem" id="dropdown-toggle">
+                Students
+                <ul class="dropdown hidden" id="dropdown">
+                  <li class="dropdown-item">Paul</li>
+                  <li class="dropdown-item">Will</li>
+                  <li class="dropdown-item">Miriam</li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </section>
+      </section>
+      <div class="block">
+        <h4>Need help?</h4>
+        <a
+          target="_blank"
+          href="https://www.w3schools.com/jsref/event_onmouseover.asp"
+          >mouseover()</a
+        >
+        <a
+          target="_blank"
+          href="https://www.w3schools.com/jsref/event_onmouseout.asp"
+          >mouseout</a
+        >
+      </div>
+    </div>
+    <script type="module" src="domEvents.js"></script>
+  </body>
+</html>
