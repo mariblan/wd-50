@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LocalStorage - setItem()</title>
+    <link rel="stylesheet" href="../catch-ups.css" />
+  </head>
+  <body>
+    <div class="block">
+      <h1>Local Storage - setItem()</h1>
+      <div class="sections-container">
+        <section class="sections">
+          <h2>Definition</h2>
+          <p>
+            Local storage is a read-only property of the window interface that
+            allows you to access a storage object for the Document's origin.
+          </p>
+          <p>
+            Local Storage data is saved accross sessions, so it is a good place
+            to store data that you want to persist.
+          </p>
+          <p>
+            The setItem() method sets the value of the specified Storage Object
+            item.
+          </p>
+          <p>
+            The value will be stored as a string, so if the value that wants to
+            be saved is not a string, it will need to be stringified.
+          </p>
+        </section>
+        <section class="sections">
+          <h2>How to set an item</h2>
+          <ul>
+            <li>Set an item: localStorage.setItem('key', 'value')</li>
+            <li>
+              Setting the value when it is not a string: JSON.stringify(value)
+            </li>
+          </ul>
+        </section>
+        <section class="sections">
+          <h2>Steps</h2>
+          <ol>
+            <li>
+              Add an item with the value of a string to your localStorage:
+              <ul>
+                <li>Name the key string</li>
+                <li>Pass your name as a value</li>
+              </ul>
+            </li>
+            <li>
+              Add a second item with the value of an array to your localStorage:
+              <ul>
+                <li>Name the key strArray.</li>
+                <li>Pass and array of strings as its value.</li>
+              </ul>
+            </li>
+            <li>
+              Add a third item with the value of an array to your localStorage
+              <ul>
+                <li>Name the key objArray</li>
+                <li>Pass the value of an array of objects.</li>
+              </ul>
+            </li>
+          </ol>
+        </section>
+      </div>
+    </div>
+    <div class="block2">
+      <div class="block">
+        <h4>How to check localStorage?</h4>
+        <p>
+          Open the developer tools in your browser and go to the Application
+          tab. You will see the localStorage object and the items you have
+          saved.
+        </p>
+      </div>
+      <div class="block">
+        <h4>Need help?</h4>
+        <a
+          target="_blank"
+          href="https://www.w3schools.com/jsref/met_storage_setitem.asp"
+          >setItem()</a
+        >
+        <a
+          target="_blank"
+          href="https://www.w3schools.com/js/js_json_stringify.asp"
+          >JSON.stringify()</a
+        >
+      </div>
+    </div>
+    <script type="module" src="localStorageSetItem.js"></script>
+  </body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Storage</title>
+    <link rel="stylesheet" href="../catch-ups.css" />
+  </head>
+  <body>
+    <div class="block">
+      <h1>Local Storage</h1>
+      <div class="sections-container">
+        <section class="sections">
+          <h2>Definition</h2>
+          <p>
+            Local storage is a read-only property of the window interface that
+            allows you to access a storage object for the Document's origin.
+          </p>
+          <p>
+            Local Storage data is saved accross sessions, so it is a good place
+            to store data that you want to persist.
+          </p>
+        </section>
+        <section class="sections">
+          <h2>How to use localStorage</h2>
+          <ul>
+            <li>Set an item: localStorage.setItem('key', 'value')</li>
+            <li>Get an item: localStorage.getItem('key')</li>
+            <li>Remove an item: localStorage.removeItem('key')</li>
+            <li>Clear all items: localStorage.clear()</li>
+          </ul>
+        </section>
+        <section class="sections">
+          <h2>Steps</h2>
+          <ol>
+            <li>
+              Get the form element with the id "to-do-form":
+              <ul>
+                <li>Save it in a variable called form</li>
+              </ul>
+            </li>
+            <li>
+              Get the input element with the id "to-do-input":
+              <ul>
+                <li>Store it in a variable called "toDoInput"</li>
+              </ul>
+            </li>
+            <li>
+              Get the button element with the id "add-todo":
+              <ul>
+                <li>Store it in a variable called addBtn</li>
+              </ul>
+            </li>
+            <li>
+              Add a submit event listener to the form element:
+              <ul>
+                <li>
+                  Pass two arguments:
+                  <ul>
+                    <li>The type of event: "submit"</li>
+                    <li>
+                      An anonymous function:
+                      <ul>
+                        <li>Give it the "event" as a parameter</li>
+                        <li>
+                          Use the method preventDefault() to avoid the form from
+                          refreshing.
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              Add a click event listener on the addBtn element:
+              <ul>
+                <li>
+                  Pass two arguments:
+                  <ul>
+                    <li>The type of event: "click</li>
+                    <li>
+                      An anonymous function:
+                      <ul>
+                        <li>No parameter needed</li>
+                        <li>
+                          Create a conditional to check if the value of
+                          "toDoInput" is an empty string:
+                          <ul>
+                            <li>
+                              Create an alert asking the user to fill the input
+                              if the condition checks as true.
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          After the conditional ends, add the value of the
+                          "toDoInput" to the localStorage:
+                          <ul>
+                            <li>Store it under the key "toDoList"</li>
+                            <li>Check if the item is in the storage or not.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ol>
+        </section>
+      </div>
+    </div>
+    <div class="block2">
+      <div class="block">
+        <h4>How to check localStorage?</h4>
+        <p>
+          Open the developer tools in your browser and go to the Application
+          tab. You will see the localStorage object and the items you have
+          saved.
+        </p>
+      </div>
+      <div class="block">
+        <!-- Use DOM manipulation to insert your name here -->
+        <form id="to-do-form">
+          <input type="text" id="to-do-input" />
+          <button type="submit" id="add-todo">Add</button>
+        </form>
+      </div>
+    </div>
+    <script type="module" src="localStorageEvent.js"></script>
+  </body>
+</html>
