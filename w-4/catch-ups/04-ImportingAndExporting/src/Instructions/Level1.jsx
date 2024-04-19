@@ -77,7 +77,6 @@ const Level1 = () => {
             </li>
           </ul>
         </li>
-        <li></li>
       </ol>
     </>
   );
