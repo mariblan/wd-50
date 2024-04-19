@@ -54,6 +54,10 @@ const Level3 = () => {
             </li>
           </ul>
         </li>
+        <li>
+          Now you sould be able to see the presentation text again in the screen
+          as before.
+        </li>
       </ol>
     </>
   );
