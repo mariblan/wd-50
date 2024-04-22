@@ -1,11 +1,11 @@
-import profilePic from '../assets/profilePic.jpeg';
+
 
 function Presentation() {
   return (
     <div className='block2'>
       <div className='card'>
         <div className='cardImage'>
-          <img src={profilePic} alt='Ana Smith' />
+          
         </div>
         <div className='presentation-container'>
           <h2>Ana Smith</h2>
