@@ -1,12 +1,8 @@
-
-
 function Presentation() {
   return (
     <div className='block2'>
       <div className='card'>
-        <div className='cardImage'>
-          
-        </div>
+        <div className='cardImage'></div>
         <div className='presentation-container'>
           <h2>Ana Smith</h2>
           <p id='presentation'>
