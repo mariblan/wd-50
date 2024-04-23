@@ -45,7 +45,12 @@ const Level2 = () => {
             </li>
           </ul>
         </li>
-        <li>Now you are rendering the same card three times. To make this new component rehusable, instead of passing the same information over and over</li>
+        <li>
+          Now you are rendering the same card three times. To make this new
+          component rehusable, instead of passing the same information over and
+          over, you can render the card with different information. For that, we
+          will use props. Go to the next level to do that!
+        </li>
       </ol>
     </>
   );
