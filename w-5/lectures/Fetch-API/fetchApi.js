@@ -3,6 +3,8 @@ fetch('https://jsonplaceholder.typicode.com/users')
   .then((json) => mapUsers(json))
   .catch((error) => console.log(error));
 
+
+
 const mapUsers = (data) => {
   const ulElement = document.getElementById('users');
   data.map((data) => {
