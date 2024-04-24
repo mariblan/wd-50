@@ -1,5 +1,9 @@
 const SuperButton = () => {
-  return <button>Change me</button>;
+  const handleClick = () => {
+    console.log('Button clicked');
+  };
+  
+  return <button onClick={() => console.log("Button clicked")}>Change me</button>;
 };
 
 export default SuperButton;
