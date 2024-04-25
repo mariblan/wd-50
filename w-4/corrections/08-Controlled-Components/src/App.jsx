@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Instructions from './instructions/Instructions';
 import DisplayToDos from './components/DisplayToDos';
 import Form from './components/Form';
@@ -15,11 +15,19 @@ export default function App() {
       done: false,
     },
   ]);
+  const [toDo, setToDo] = useState({});
+
+  useEffect(() => {
+    const data = localStorage.getItem('todos');
+    if (data) {
+      setTodos(JSON.parse(data));
+    }
+  }, [toDo]);
 
   return (
     <div className='App'>
       <Instructions />
-      <Form />
+      <Form setToDo={setToDo} todos={todos} setTodos={setTodos} />
       <DisplayToDos todos={todos} setTodos={setTodos} />
     </div>
   );
