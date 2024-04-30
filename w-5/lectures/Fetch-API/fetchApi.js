@@ -1,9 +1,17 @@
+// let data;
 fetch('https://jsonplaceholder.typicode.com/users')
-  .then((res) => res.json())
-  .then((json) => mapUsers(json))
+  .then((response) => {
+    if (!response.ok)
+      throw new Error(`Request failed with status of ${response.status}`);
+    return response.json();
+  })
+  .then((json) => {
+    console.log(json);
+    mapUsers(json);
+  })
   .catch((error) => console.log(error));
 
-
+  
 
 const mapUsers = (data) => {
   const ulElement = document.getElementById('users');
@@ -21,3 +29,11 @@ const mapUsers = (data) => {
     ulElement.appendChild(div);
   });
 };
+
+
+// fetch('https://jsonplaceholder.typicode.com/users', {
+//   method: 'POST',
+//   headers: {
+//     'Content-Type': 'application/json',
+//   },
+// })
