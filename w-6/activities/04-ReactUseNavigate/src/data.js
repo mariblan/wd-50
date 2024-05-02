@@ -1,17 +1,17 @@
 const teachers = [
   {
-    name: 'Blair',
-    age: 29,
-    address: 'Technopromenade 38',
-    email: 'blair@gmail.com',
-    scr: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsynwv-5qtogtOwJbIjaPFJUmHpzhxgqIAug&usqp=CAU',
-  },
-  {
     name: 'Jason',
     age: 29,
     address: 'Humerstr. 54',
     email: 'jsn@gmail.com',
     src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRudDbHeW2OobhX8E9fAY-ctpUAHeTNWfaqJA&usqp=CAU',
+  },
+  {
+    name: 'Blair',
+    age: 29,
+    address: 'Technopromenade 38',
+    email: 'blair@gmail.com',
+    src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLpZmIPmHWUdp9OQRDv44yBAvhsOANcgNp1g&usqp=CAU',
   },
 ];
 

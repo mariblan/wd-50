@@ -1,7 +1,11 @@
-function OnePerson({ name, age, address, email, src }) {
+function OnePerson({ person: { name, age, address, email, src } }) {
+  console.log(name, age, address, email, src);
+  console.log(src);
   return (
     <div className='userProfile'>
-      <img src={src} alt='name' />
+      <div className='imageWrapper'>
+        <img src={src} alt='name' />
+      </div>
       <div>
         <p>Name: {name}</p>
         <p>Age: {age}</p>

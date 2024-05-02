@@ -1,4 +1,6 @@
 import './App.css';
+import Teachers from './components/Teachers';
+import Students from './components/Students';
 
 function App() {
   return (
@@ -6,7 +8,7 @@ function App() {
       <nav>{/* CREATE NAVIGATIONAL LINKS */}</nav>
       <div className='Instructions'>
         <div className='block'>
-          {' '}
+          <h2>Instructions</h2>
           <p className='block2'>
             For this exercise, you will have to redirect backward or forward by
             using a <b>Go back</b> and a <b>Go forward</b> button.
