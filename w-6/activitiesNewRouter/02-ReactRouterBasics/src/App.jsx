@@ -5,8 +5,7 @@ function App() {
   return (
     <div className='App'>
       <nav>
-        {/* UNCOMMENT WHEN ROUTING IS ADDED TO THE APP COMPONENT 
-         <Link className="link" to="/students">
+        {/* <Link className="link" to="/students">
           Students
         </Link>
         <Link className="link" to="/results">
@@ -15,7 +14,7 @@ function App() {
       </nav>
       <div className='Instructions'>
         <div className='block'>
-          <h2>Instructions</h2>
+          For this exercise, you will have to:
           <ol>
             <li>
               Create a component named {'<Student>'} that will display{' '}
@@ -35,60 +34,62 @@ function App() {
             <li>
               Now, define your routing. You should create two routes:
               <ul>
-                <li>/student: shows the Student component</li>
+                <li>/students: shows the Students component</li>
                 <li>/results: shows the results component</li>
               </ul>
               <ol>
                 <li>
-                  Create the routes for the components <b>Student</b> and{' '}
+                  Create the routes for the components <b>Students</b> and{' '}
                   <b>Results</b>:
                   <ul>
                     <li>
-                      In main.jsx import the element <b>BrowserRouter</b> from{' '}
-                      <b>react-router-dom</b>
+                      Create a file named <b>router.jsx</b>
+                    </li>
+                    <li>
+                      Import the <b>App</b>, <b>Students</b> and <b>Results</b>{' '}
+                      components at the top of the file.
+                    </li>
+                    <li>
+                      Import the createRoutesFromElements element from{' '}
+                      <b>"react-router-dom"</b> and create the routes as JSX
+                      elements and save it to a variable <b>OR</b> create an
+                      array of objects with the routes.
                       <ul>
                         <li>
-                          Use it inside the render method as html tags wrapping
-                          around all that is already inside.
+                          The variable where you store this should be named
+                          routes.
+                        </li>
+                        <li>
+                          You should create a route for each element, with the{' '}
+                          <b>App</b> route being the default route for path (
+                          <b>{`/`}</b>
+                          ).
                         </li>
                       </ul>
                     </li>
                     <li>
-                      In App.jsx, import the <b>App</b>, <b>Student</b> and{' '}
-                      <b>Results</b> components at the top of the file.
-                    </li>
-                    <li>
-                      Import the <b>Routes</b> and <b>Route</b> elements from{' '}
-                      <b>react-router-dom</b> and create the routes as JSX
-                      elements inside the return of the <b>App</b> component.
+                      Import the createBrowserRouter elment from{' '}
+                      <b>"react-router-dom"</b> and use it to create the router,
+                      passing the routes variable as the argument.{' '}
                       <ul>
                         <li>
-                          Use the <b>Routes</b> element as html tags with an
-                          open and a closing tag.
+                          The variable where you store this should be called
+                          router.
                         </li>
+                      </ul>
+                    </li>
+                    <li>
+                      Export the router and import it into <b>main.jsx</b>
+                    </li>
+                    <li>
+                      In <b>main.jsx</b>, import also the RouterProvider element
+                      from <b>"react-router-dom"</b>, and then return it instead
+                      of the <b>App()</b> inside the render mehtod, between the
+                      StrictMode elements. Pass the router as props.
+                      <ul>
                         <li>
-                          Inside the <b>Routes</b> tags, as children, add two
-                          routes using the <b>Route</b> element as a tag.
-                          <ul>
-                            <li>
-                              In the first route, add the path attribute and
-                              give the path {'/student'} for the <b>Student</b>
-                              component
-                            </li>
-                            <li>
-                              In the first route, add the element attribute and
-                              inject the <b>Student</b> component as its value.
-                            </li>
-                            <li>
-                              In the second route, add the path attribute and
-                              give the path {'/results'} for the Results
-                              component
-                            </li>
-                            <li>
-                              In the first route, add the element attribute and
-                              inject the Results component as its value.
-                            </li>
-                          </ul>
+                          It should look like this:{' '}
+                          {`<RouterProvider router={router} />`}
                         </li>
                       </ul>
                     </li>
@@ -106,9 +107,17 @@ function App() {
               className='link'
               target='_blank'
               rel='noopener noreferrer'
-              href='https://reactrouter.com/en/main/router-components/browser-router'
+              href='https://reactrouter.com/en/main/utils/create-routes-from-elements'
             >
-              BrouserRouter{' '}
+              createRoutesFromElements{' '}
+            </a>
+            <a
+              className='link'
+              target='_blank'
+              rel='noopener noreferrer'
+              href='https://reactrouter.com/en/main/routers/create-browser-router'
+            >
+              CreateBrouserRouter{' '}
             </a>
             <a
               className='link'
