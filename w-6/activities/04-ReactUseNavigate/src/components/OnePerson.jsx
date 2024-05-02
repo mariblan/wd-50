@@ -1,15 +1,13 @@
-import React from 'react';
-
-function OnePerson() {
+function OnePerson({ name, age, address, email, src }) {
   return (
-    <div>
-      <h2>{name}</h2>
-      <p>
-        <b>Email</b>: {email}
-      </p>
-      <p>
-        <b>Address</b>: {email}
-      </p>
+    <div className='userProfile'>
+      <img src={src} alt='name' />
+      <div>
+        <p>Name: {name}</p>
+        <p>Age: {age}</p>
+        <p>Address: {address}</p>
+        <p>Email: {email}</p>
+      </div>
     </div>
   );
 }
