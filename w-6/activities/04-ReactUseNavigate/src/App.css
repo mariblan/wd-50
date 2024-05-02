@@ -55,3 +55,47 @@ a.link {
   display: inline-block;
   border-radius: 3px;
 }
+
+.userProfile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem auto;
+  gap: 1rem;
+  text-align: left;
+  background-color: #ebebeb;
+  color: black;
+  border-radius: 10px;
+  width: 20rem;
+  overflow: hidden;
+}
+
+.userProfile:hover {
+  scale: 1.01;
+  cursor: pointer;
+  transition: scale 0.2s ease-in-out;
+}
+
+.userProfile > img {
+  object-fit: cover;
+  display: block;
+}
+
+.userProfile > div {
+  padding: 0 0.5rem 0.5rem;
+}
+
+.userProfile > div > * {
+  line-height: 1.6rem;
+  margin: 0;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 14rem;
+  overflow: hidden;
+}
+.imageWrapper img {
+  width: 100%;
+}
