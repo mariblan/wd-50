@@ -29,7 +29,7 @@ function App() {
           }
         >
           <Route path='/' element={<Recipes recipes={contentfulRecipes} />} />
-          <Route path='/onerecipe' element={<OneRecipe />} />
+          <Route path='/recipe/:id' element={<OneRecipe />} />
         </Route>
       </Routes>
     </ContentfulProvider>
