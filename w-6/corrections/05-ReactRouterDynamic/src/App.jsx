@@ -1,14 +1,16 @@
 import './App.css';
-import { Link } from "react-router-dom";
+import { Routes, Route, Link } from 'react-router-dom';
+import Student from './components/Student';
+import Results from './components/Results';
 
 export default function App() {
   return (
     <div className='App'>
       <nav>
-        <Link className="link" to="/students/2">
+        <Link className='link' to='/students/2'>
           Students #2
         </Link>
-        <Link className="link" to="/results/john">
+        <Link className='link' to='/results/john'>
           Results John
         </Link>
       </nav>
@@ -51,7 +53,12 @@ export default function App() {
           </a>
         </div>
 
-        <p className='block'>Create your routing here! (Routes & Route)</p>
+        <p className='block'>
+          <Routes>
+            <Route path='/students/:id' element={<Student />} />
+            <Route path='/results/:name' element={<Results />} />
+          </Routes>
+        </p>
       </div>
     </div>
   );

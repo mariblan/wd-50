@@ -1,16 +1,23 @@
 import './App.css';
 import Instructions from './instructions/Instructions';
-
+import Students from './components/Students';
+import { Routes, Route, NavLink } from 'react-router-dom';
+import Student from './components/Student';
 function App() {
   return (
     <div className='App'>
       <nav>
-        <a className='link' href='#'>
+        <NavLink className='link' to='/students'>
           Students
-        </a>
+        </NavLink>
       </nav>
       <div className='Instructions'>
-        <div className='block'>Render your components here</div>
+        <div className='block'>
+          <Routes>
+            <Route path='/students' element={<Students />} />
+            <Route path='/students/:id' element={<Student />} />
+          </Routes>
+        </div>
         <Instructions />
       </div>
     </div>
