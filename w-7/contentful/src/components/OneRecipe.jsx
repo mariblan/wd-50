@@ -1,9 +1,8 @@
-import React from 'react'
-
+import { useParams } from 'react-router-dom';
 function OneRecipe() {
-  return (
-    <div>OneRecipe</div>
-  )
+  const { id } = useParams();
+  console.log(id);
+  return <div>OneRecipe id: {id}</div>;
 }
 
-export default OneRecipe
+export default OneRecipe;
