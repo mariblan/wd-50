@@ -1,0 +1,57 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+}
+.memeCreator {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.addForm {
+  display: flex;
+  flex-direction: column;
+  margin: 5rem 0;
+  width: 30%;
+  gap: 1rem;
+}
+.addForm > div {
+  display: flex;
+  gap: 0.5rem;
+}
+.memeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 50%;
+}
+
+.buttons {
+  display: flex;
+  gap: 2rem;
+}
+
+.displayMeme {
+  width: 40rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.displayMeme img {
+  width: 100%;
+  border-radius: 0.5em;
+  box-shadow: 0 0 1em #00000022;
+}
