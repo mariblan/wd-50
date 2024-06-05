@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+
 const connectionToDB = require('./DB/dbConnection.js');
 const countriesRouter = require('./routes/countryRoutes.js');
 const sanitize = require('express-mongo-sanitize');
