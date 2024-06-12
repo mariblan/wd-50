@@ -1,5 +1,5 @@
 import express from 'express';
-import { getPgVersion, pool } from './DB/fetchDB.js';
+import { getPgVersion } from './DB/fetchDB.js';
 import countriesRouter from './routes/countriesRoutes.js';
 import dotenv from 'dotenv';
 
@@ -8,9 +8,10 @@ const app = express();
 const port = process.env.BACKEND_URL || 8080;
 
 getPgVersion();
+
+app.use(express.json())
 app.get('/', (req, res) => {
-  console.log(process.env.PGHOST);
-  res.send(`${process.env.PGHOST}`);
+  res.send('Hello class');
 });
 
 app.use('/countries', countriesRouter);
